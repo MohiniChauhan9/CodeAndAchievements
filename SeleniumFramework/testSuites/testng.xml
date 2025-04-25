@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" >
+    <groups>
+        <run>
+            <include name="orderValidation"/>
+        </run>
+    </groups>
+
+<!--    2 classes will run simultaneously and the(2) methods inside the class will also-->
+    <test  name="Submit Order Test" thread-count="2">
+        <classes>
+            <class name="Framework.tests.SubmitOrderTest">
+<!--                <methods>-->
+<!--                    <include name="SubmitOrder"/>-->
+<!--                </methods>-->
+            </class>
+<!--            <class name=""></class>-->
+        </classes>
+    </test>
+</suite>
